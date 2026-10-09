@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduControl - Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+    <a href="dashboard.html" class="marca">EC EduControl</a>
+
+    <nav>
+        <a href="dashboard.html">Início</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="listagem.html">Alunos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <button class="btn-sair" onclick="sair()">Sair</button>
+</header>
+
+<main class="container">
+
+    <section class="banner">
+        <p class="etiqueta">PAINEL DE CONTROLE</p>
+        <h1>Bem-vindo ao EduControl!</h1>
+        <p>Organize os cadastros dos alunos de maneira simples e prática.</p>
+
+        <a href="cadastro.html" class="botao">+ Cadastrar aluno</a>
+        <a href="listagem.html" class="botao secundario">Consultar alunos</a>
+    </section>
+
+    <section class="resumo">
+        <div class="card">
+            <h3>Total de alunos</h3>
+            <p id="totalAlunos">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Funcionalidades</h3>
+            <p>CRUD completo</p>
+        </div>
+
+        <div class="card">
+            <h3>Tecnologias</h3>
+            <p>HTML, CSS e JS</p>
+        </div>
+    </section>
+
+    <section class="painel">
+        <h2>O que deseja fazer?</h2>
+
+        <div class="atalhos">
+            <a href="cadastro.html">📝 Cadastrar aluno</a>
+            <a href="listagem.html">📋 Listar alunos</a>
+            <a href="sobre.html">ℹ️ Sobre o projeto</a>
+            <a href="contato.html">✉️ Entrar em contato</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>EduControl © 2026 - Projeto acadêmico</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,630 @@
+/* ========================================
+   EDUCONTROL - TEMA ESCURO
+   ======================================== */
+
+:root {
+    --roxo: #8b5cf6;
+    --roxo-escuro: #7040e8;
+    --roxo-neon: #a78bfa;
+    --fundo: #09090f;
+    --fundo-secundario: #101019;
+    --card: #161621;
+    --card-hover: #1d1d2b;
+    --texto: #f4f4fa;
+    --cinza: #a1a1b5;
+    --borda: #29293b;
+    --branco: #ffffff;
+    --verde: #34d399;
+    --vermelho: #fb7185;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--texto);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========================================
+   CABEÇALHO
+   ======================================== */
+
+.topo {
+    background: #101019;
+    min-height: 78px;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--borda);
+    box-shadow: 0 5px 25px #00000050;
+    position: relative;
+    z-index: 10;
+}
+
+.marca {
+    color: var(--roxo-neon);
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.marca:hover {
+    color: white;
+    text-shadow: 0 0 15px var(--roxo);
+}
+
+.topo nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.topo nav a {
+    color: var(--cinza);
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.topo nav a:hover {
+    color: white;
+    background: #29213f;
+    box-shadow: 0 0 12px #8b5cf626;
+}
+
+/* ========================================
+   BOTÕES
+   ======================================== */
+
+button,
+.botao {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b5cf6, #7040e8);
+    color: white;
+    border: 1px solid #a78bfa40;
+    padding: 12px 18px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.25s;
+    box-shadow: 0 4px 15px #8b5cf625;
+}
+
+button:hover,
+.botao:hover {
+    background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+    box-shadow: 0 0 20px #8b5cf655;
+    transform: translateY(-2px);
+}
+
+.btn-sair {
+    background: #1c1c29;
+    border: 1px solid var(--borda);
+    color: #ff8b9b;
+    box-shadow: none;
+}
+
+.btn-sair:hover {
+    background: #38202b;
+    color: white;
+}
+
+.botao.secundario {
+    background: #1c1c2b;
+    color: var(--roxo-neon);
+    border: 1px solid #8b5cf655;
+    box-shadow: none;
+}
+
+.botao.secundario:hover {
+    background: #29213f;
+}
+
+.botao-cinza {
+    background: #29293a;
+    color: #ddddee;
+    border: 1px solid #414157;
+    box-shadow: none;
+    margin-left: 5px;
+}
+
+.botao-cinza:hover {
+    background: #38384d;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+   ======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+.painel {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 35px #00000025;
+    transition: border-color 0.3s;
+}
+
+.painel:hover {
+    border-color: #8b5cf640;
+}
+
+.painel > p {
+    color: var(--cinza);
+}
+
+.banner {
+    padding: 45px;
+    border-radius: 20px;
+    color: white;
+    background:
+        radial-gradient(circle at 90% 10%, #a78bfa25, transparent 35%),
+        linear-gradient(125deg, #171324, #30204f 60%, #4b2b83);
+    border: 1px solid #8b5cf640;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 40px #8b5cf612;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 36px;
+}
+
+.banner p {
+    color: #d5cbed;
+    margin-bottom: 20px;
+}
+
+.etiqueta {
+    color: var(--roxo-neon);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* ========================================
+   CARDS DO PAINEL
+   ======================================== */
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: linear-gradient(145deg, #191925, #13131d);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 8px 25px #00000020;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #8b5cf680;
+    box-shadow: 0 10px 25px #8b5cf612;
+}
+
+.card h3 {
+    font-size: 15px;
+    color: var(--cinza);
+}
+
+.card p {
+    color: var(--roxo-neon);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.atalhos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.atalhos a {
+    color: var(--roxo-neon);
+    background: #1b1928;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 11px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.atalhos a:hover {
+    background: #28203d;
+    border-color: var(--roxo);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px #8b5cf618;
+}
+
+/* ========================================
+   FORMULÁRIOS
+   ======================================== */
+
+form label {
+    display: block;
+    margin: 17px 0 7px;
+    color: #dedeee;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #343449;
+    border-radius: 9px;
+    background: #101019;
+    color: var(--texto);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.25s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #77778d;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 3px #8b5cf625;
+    background: #14131f;
+}
+
+select option {
+    background: #161621;
+    color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#mensagem {
+    color: var(--verde);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#respostaContato {
+    color: var(--verde);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.link {
+    display: inline-block;
+    color: var(--roxo-neon);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.link:hover {
+    color: white;
+}
+
+/* ========================================
+   TABELA DE ALUNOS
+   ======================================== */
+
+#pesquisa {
+    margin: 25px 0;
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #15151f;
+}
+
+th {
+    background: #242039;
+    color: var(--roxo-neon);
+    text-align: left;
+    padding: 15px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #29293a;
+    color: #dedeee;
+    font-size: 13px;
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #201c30;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td button {
+    padding: 8px 11px;
+    margin: 2px;
+    font-size: 12px;
+}
+
+td .editar {
+    background: #6d55d9;
+}
+
+td .excluir {
+    background: #b93855;
+    box-shadow: none;
+}
+
+td .excluir:hover {
+    background: #e04765;
+    box-shadow: 0 0 12px #e0476540;
+}
+
+#quantidade {
+    margin-top: 15px;
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+#semAlunos {
+    color: var(--cinza);
+    margin-top: 15px;
+}
+
+/* ========================================
+   PÁGINA SOBRE
+   ======================================== */
+
+.tecnologias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tecnologia {
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 20px;
+    background: #11111b;
+    transition: 0.3s;
+}
+
+.tecnologia:hover {
+    border-color: var(--roxo);
+    background: #1b1929;
+}
+
+.tecnologia h3 {
+    color: var(--roxo-neon);
+}
+
+.tecnologia p {
+    margin: 0;
+    color: var(--cinza);
+}
+
+ul {
+    padding-left: 25px;
+    line-height: 2;
+    color: #d7d7e5;
+}
+
+li::marker {
+    color: var(--roxo-neon);
+}
+
+/* ========================================
+   LOGIN
+   ======================================== */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background:
+        radial-gradient(ellipse at top left, #8b5cf626, transparent 40%),
+        radial-gradient(ellipse at bottom right, #4c1d9530, transparent 40%),
+        #09090f;
+}
+
+.login-card {
+    background: linear-gradient(145deg, #191925, #11111a);
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border: 1px solid #39304e;
+    border-radius: 20px;
+    box-shadow: 0 20px 70px #00000065, 0 0 35px #8b5cf610;
+}
+
+.login-card h1 {
+    text-align: center;
+    color: var(--roxo-neon);
+}
+
+.login-card > p {
+    text-align: center;
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    color: white;
+    background: linear-gradient(135deg, #a78bfa, #7040e8);
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 0 25px #8b5cf655;
+}
+
+.login-card button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-card .observacao {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #88889d;
+}
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #77778d;
+    font-size: 12px;
+    border-top: 1px solid var(--borda);
+    background: #0d0d15;
+}
+
+/* ========================================
+   SELEÇÃO E ROLAGEM
+   ======================================== */
+
+::selection {
+    background: #8b5cf680;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 800px) {
+    .topo {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .topo nav {
+        justify-content: center;
+    }
+
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        padding: 28px;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .painel {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .atalhos,
+    .tecnologias {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .login-card {
+        padding: 25px;
+    }
+
+    .topo nav a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .botao {
+        margin-bottom: 8px;
+    }
+}

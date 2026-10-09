@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduControl - Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+    <a href="dashboard.html" class="marca">EC EduControl</a>
+    <nav>
+        <a href="dashboard.html">Início</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="listagem.html">Alunos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <button class="btn-sair" onclick="sair()">Sair</button>
+</header>
+
+<main class="container">
+    <section class="painel">
+        <h1>Entre em contato</h1>
+        <p>Preencha o formulário para registrar sua mensagem.</p>
+
+        <form id="contatoForm">
+            <label for="contatoNome">Nome</label>
+            <input type="text" id="contatoNome"
+                   placeholder="Seu nome" required>
+
+            <label for="contatoEmail">E-mail</label>
+            <input type="email" id="contatoEmail"
+                   placeholder="seuemail@email.com" required>
+
+            <label for="assunto">Assunto</label>
+            <select id="assunto">
+                <option>Dúvida</option>
+                <option>Sugestão</option>
+                <option>Problema</option>
+                <option>Outro</option>
+            </select>
+
+            <label for="mensagemContato">Mensagem</label>
+            <textarea id="mensagemContato" rows="5"
+                      minlength="10" placeholder="Digite sua mensagem"
+                      required></textarea>
+
+            <button type="submit">Enviar mensagem</button>
+        </form>
+
+        <p id="respostaContato"></p>
+    </section>
+</main>
+
+<footer>EduControl © 2026 - Projeto acadêmico</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

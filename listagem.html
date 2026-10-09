@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduControl - Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+    <a href="dashboard.html" class="marca">EC EduControl</a>
+    <nav>
+        <a href="dashboard.html">Início</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="listagem.html">Alunos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <button class="btn-sair" onclick="sair()">Sair</button>
+</header>
+
+<main class="container">
+    <section class="painel">
+        <h1>Alunos cadastrados</h1>
+        <p>Consulte, pesquise, altere ou exclua os registros.</p>
+
+        <a href="cadastro.html" class="botao">+ Novo aluno</a>
+
+        <input type="search" id="pesquisa"
+               placeholder="Pesquisar por nome ou e-mail...">
+
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Sexo</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaAlunos"></tbody>
+            </table>
+        </div>
+
+        <p id="semAlunos"></p>
+        <p id="quantidade"></p>
+    </section>
+</main>
+
+<footer>EduControl © 2026 - Projeto acadêmico</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
